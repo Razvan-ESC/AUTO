@@ -1,0 +1,2 @@
+JDK15
+Postgresql JDBC 42.2.22

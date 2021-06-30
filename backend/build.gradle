@@ -1,0 +1,55 @@
+plugins {
+    id "org.springframework.boot" version "2.5.2"
+    id "io.spring.dependency-management" version "1.0.11.RELEASE"
+    id "java"
+}
+
+group 'org.efden'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
+    implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.5.2'
+    implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.5.2'
+
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.7'
+
+    // https://mvnrepository.com/artifact/org.webjars/webjars-locator-core
+    implementation group: 'org.webjars', name: 'webjars-locator-core', version: '0.47'
+
+    // https://mvnrepository.com/artifact/org.webjars/sockjs-client
+    implementation group: 'org.webjars', name: 'sockjs-client', version: '1.5.1'
+
+    // https://mvnrepository.com/artifact/org.webjars/bootstrap
+    implementation group: 'org.webjars', name: 'bootstrap', version: '5.0.1'
+
+
+    // https://mvnrepository.com/artifact/org.webjars.bower/jquery
+    implementation group: 'org.webjars.bower', name: 'jquery', version: '3.6.0'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.5.2'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.2'
+
+
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.22'
+}
+
+jar {
+    manifest {
+        attributes(
+
+                'Main-Class': 'org.efden.Main'
+        )
+    }
+}
