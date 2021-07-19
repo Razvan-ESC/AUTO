@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "User")
-public class UserClass {
+@Table(name = "Users")
+public class UsersClass {
 
     @Id
     @Column(name = "id_user", unique = true)

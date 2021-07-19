@@ -8,13 +8,13 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 
-import Home from '../screens/Home';
-import About from '../screens/About';
-import Carpool from '../screens/Carpool';
-import Charging from '../screens/Charging';
-import Map from '../screens/Map';
-import Settings from '../screens/Settings';
-import MyAccount from '../screens/MyAccount';
+import Home from '../screens/HomeScreen';
+import About from '../screens/AboutScreen';
+import Carpool from '../screens/CarpoolScreen';
+import Charging from '../screens/ChargingScreen';
+import Map from '../screens/MapScreen';
+import Settings from '../screens/SettingsScreen';
+import MyAccount from '../screens/MyAccountScreen';
 
 
 
