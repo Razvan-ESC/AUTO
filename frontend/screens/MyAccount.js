@@ -10,7 +10,7 @@ import {
   Col,
 } from "react-bootstrap";
 
-import background from './../assets/img/photo-1431578500526-4d9613015464.jpeg';
+import background from './../assets/img/photo-background.jpeg';
 import face from './../assets/img/faces/face-0.jpg';
 
 function User() {
