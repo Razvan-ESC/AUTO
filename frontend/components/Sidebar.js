@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { SafeAreaView } from 'react-native';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer, DrawerActions } from '@react-navigation/native';
 import {
@@ -9,6 +10,8 @@ import {
 } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { Card } from "react-bootstrap";
+import face from './../assets/img/faces/face-0.jpg';
 
 import Home from '../screens/Home';
 import About from '../screens/About';
@@ -147,16 +150,24 @@ const Drawer = createDrawerNavigator();
 
 function SideBar() {
   return (
+
     
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
-        <Drawer.Screen name="Home" component={HomeStackScreen} />
-        <Drawer.Screen name="About" component={AboutStackScreen} />
-        <Drawer.Screen name="Carpool" component={CarpoolStackScreen} />
-        <Drawer.Screen name="Charging" component={ChargingStackScreen} />
-        <Drawer.Screen name="Map" component={MapStackScreen} />
-        <Drawer.Screen name="Settings" component={SettingsStackScreen} />
-        <Drawer.Screen name="MyAccount" component={MyAccountStackScreen} />
+        <Drawer.Screen name="Home" component={HomeStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="home" type="font-awesome" size={24} color={color} /> )}} />
+        <Drawer.Screen name="About" component={AboutStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="card" type="font-awesome" size={24} color={color} /> )}} />
+        <Drawer.Screen name="Carpool" component={CarpoolStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="car" type="font-awesome" size={24} color={color} /> )}} />        
+        <Drawer.Screen name="Charging" component={ChargingStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="battery-full" type="font-awesome" size={24} color={color} /> )}} />
+        <Drawer.Screen name="Map" component={MapStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="location" type="font-awesome" size={24} color={color} /> )}} />
+        <Drawer.Screen name="Settings" component={SettingsStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="settings" type="font-awesome" size={24} color={color} /> )}} />
+        <Drawer.Screen name="MyAccount" component={MyAccountStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="key" type="font-awesome" size={24} color={color} /> )}} />
       </Drawer.Navigator>
     </NavigationContainer>
     
