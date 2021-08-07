@@ -46,9 +46,6 @@ function Carpool() {
   }, []); */
   return (
     <>
-      <div className="rna-container">
-        
-      </div>
 
       <Container fluid>
         <Card>

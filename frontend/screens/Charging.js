@@ -120,12 +120,13 @@ const Charging = () => {
                             <Row>
                                 <Col className="offset-md-3 text-center" md="6">
                                 <Card.Title as="h4">Status incarcare</Card.Title>
+                                <h4></h4>
                                 </Col>
                             </Row>
                             <Row>
-                            <Col className=" justify-content-center text-center" >
+                            <Col className="justify-content-center text-center" >
                             <div className="d-flex justify-content-center">
-                            <div className="d-flex battery-outer">
+                            <div className="d-flex flex-column battery-outer">
 
                                 {batteryStrokes.map((stroke, idx) => (
                                     <BatteryStroke key={idx} visible={stroke} />

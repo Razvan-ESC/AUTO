@@ -3418,9 +3418,11 @@ Copyright (c) 2015 Daniel Eden
     border-radius: 7px;
   }
   .battery-inner {
-    width: 100%;
-    margin: 2px 0;
+    width: 97.5%;
+    margin: 2px 2px;
     background-color: #1e8291;
+    z-index: 1000;
+    
   }
   .battery-empty .battery-inner {
     background: #911e49;
