@@ -55,7 +55,7 @@ function Carpool() {
           <Card.Body>
             <Row>
             <Col className=" justify-content-center offset-md-2 text-center" md="6">
-                  <img src={carpool} alt="Carpool"/>
+                  <img src={carpool} alt="Carpool" width='300px'/>
               </Col>
             </Row>
               <Row>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, TouchableOpacity } from 'react-native';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer, DrawerActions } from '@react-navigation/native';
 import {
@@ -8,10 +8,11 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
+import {Card, Col, Row} from 'react-bootstrap';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Card } from "react-bootstrap";
-import face from './../assets/img/faces/face-0.jpg';
+import logo from './../assets/img/logo.png';
+import photo from './../assets/img/faces/face-0.jpg';
 
 import Home from '../screens/Home';
 import About from '../screens/About';
@@ -20,6 +21,8 @@ import Charging from '../screens/Charging';
 import Map from '../screens/Map';
 import Settings from '../screens/Settings';
 import MyAccount from '../screens/MyAccount';
+import { Container } from 'react-bootstrap';
+import context from 'react-bootstrap/esm/AccordionContext';
 
 
 
@@ -141,7 +144,33 @@ const MyAccountStackScreen = ({navigation}) =>(
 function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
+      <View>
+        <TouchableOpacity>
+          <div className="sidebar-background">
+            <div className="sidebar-wrapper">
+              <div className="logo d-flex align-items-center justify-content-start">
+                <a className="simple-text logo-mini mx-1">
+                  <div className="logo-img">
+                    <img src={logo} alt="Logo-sidebar" width='55px' height='55px'/>
+                  </div>
+                </a>
+                <a className="simple-text">EFdeN App</a>
+              </div>
+            </div>
+          </div> 
+
+          <Card style={{ marginTop: '4.5rem' }}>
+          <div className="card-user">
+                <div className="author">
+                    <img alt="..." className="avatar border-gray" src={photo}></img>
+                    <h5 className="title">Flavia Barbu</h5>
+                  <p className="description">flaviab</p>
+                </div>            
+          </div>
+          </Card>
+        </TouchableOpacity>
+      </View>
+      <DrawerItemList {...props} />    
     </DrawerContentScrollView>
   );
 }
@@ -169,6 +198,7 @@ function SideBar() {
         <Drawer.Screen name="MyAccount" component={MyAccountStackScreen} options={{ drawerIcon: ({ color }) => (
           <Icon name="key" type="font-awesome" size={24} color={color} /> )}} />
       </Drawer.Navigator>
+
     </NavigationContainer>
     
   );

@@ -27,6 +27,7 @@
     "react-chartist": "^0.14.4",
     "react-circular-progressbar": "^2.0.4",
     "react-dom": "16.13.1",
+    "react-ga": "^3.3.0",
     "react-native": "0.63.4",
     "react-native-gesture": "^0.2.0",
     "react-native-gesture-handler": "~1.10.2",
@@ -38,7 +39,9 @@
     "react-native-vector-icons": "^8.1.0",
     "react-native-web": "~0.13.12",
     "react-navigation-stack": "^2.10.4",
-    "react-table-scrollbar": "^0.1.11"
+    "react-qr-barcode-scanner": "^1.0.6",
+    "react-table-scrollbar": "^0.1.11",
+    "react-use": "^17.2.4"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

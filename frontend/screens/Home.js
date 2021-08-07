@@ -25,7 +25,7 @@ function Home() {
 
       <Container fluid>
         <Row>
-          <Col lg="4" sm="6">
+          <Col lg="4" sm="4">
             <Card className="card-stats">
               <Card.Body>
                 <Row>
@@ -50,7 +50,7 @@ function Home() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col lg="4" sm="6">
+          <Col lg="4" sm="4">
             <Card className="card-stats">
               <Card.Body>
                 <Row>
@@ -75,7 +75,7 @@ function Home() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col lg="4" sm="6">
+          <Col lg="4" sm="4">
             <Card className="card-stats">
               <Card.Body>
                 <Row>
