@@ -1,12 +1,32 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {
+    View,
+    StyleSheet,
+    Text,
+} from 'react-native';
 
-const Map = () => {
-    return(
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Map!</Text>
+export default function Map() {
+
+    return (
+        <View style={styles.body}>
+            <Text>
+                Bucuresti
+            </Text>
         </View>
     );
 }
 
-export default  Map;
+const styles = StyleSheet.create({
+    body: {
+        flex: 1,
+        alignItems: 'center',
+    },
+    text: {
+        fontSize: 40,
+        margin: 10,
+    },
+    map: {
+        width: '100%',
+        height: '100%',
+    }
+});

@@ -21,6 +21,8 @@ import Charging from '../screens/Charging';
 import Map from '../screens/Map';
 import Settings from '../screens/Settings';
 import MyAccount from '../screens/MyAccount';
+import SignIn from '../screens/SignIn';
+import SignUp from '../screens/SignUp';
 import { Container } from 'react-bootstrap';
 import context from 'react-bootstrap/esm/AccordionContext';
 
@@ -141,6 +143,40 @@ const MyAccountStackScreen = ({navigation}) =>(
   </MyAccountStack.Navigator>
   );  
 
+    
+const SighInStack = createStackNavigator();
+const SignInStackScreen = ({navigation}) =>(
+  <MyAccountStack.Navigator>
+  <MyAccountStack.Screen name ="menu" component={SignIn}
+  options={{
+    title:"SignIn",
+    headerLeft:() => (
+      <Icon.Button name='menu' size={25}
+      backgroundColor = "#009387" onPress={() => navigation.openDrawer()}>    
+      </Icon.Button>
+    )
+  }}
+   />
+  </MyAccountStack.Navigator>
+  );  
+
+    
+const SignUpStack = createStackNavigator();
+const SignUpStackScreen = ({navigation}) =>(
+  <MyAccountStack.Navigator>
+  <MyAccountStack.Screen name ="menu" component={SignUp}
+  options={{
+    title:"SignUp",
+    headerLeft:() => (
+      <Icon.Button name='menu' size={25}
+      backgroundColor = "#009387" onPress={() => navigation.openDrawer()}>    
+      </Icon.Button>
+    )
+  }}
+   />
+  </MyAccountStack.Navigator>
+  );  
+
 function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
@@ -197,9 +233,13 @@ function SideBar() {
           <Icon name="settings" type="font-awesome" size={24} color={color} /> )}} />
         <Drawer.Screen name="MyAccount" component={MyAccountStackScreen} options={{ drawerIcon: ({ color }) => (
           <Icon name="key" type="font-awesome" size={24} color={color} /> )}} />
+        <Drawer.Screen name="SignIn" component={SignInStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="key" type="font-awesome" size={24} color={color} /> )}} />
+        <Drawer.Screen name="SignUp" component={SignUpStackScreen} options={{ drawerIcon: ({ color }) => (
+          <Icon name="key" type="font-awesome" size={24} color={color} /> )}} />
       </Drawer.Navigator>
 
-    </NavigationContainer>
+    </NavigationContainer>  
     
   );
 
