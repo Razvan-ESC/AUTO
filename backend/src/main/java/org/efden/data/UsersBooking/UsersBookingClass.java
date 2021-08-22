@@ -1,13 +1,15 @@
-package org.efden.data.UserBooking;
+package org.efden.data.UsersBooking;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "UserBooking")
-public class UserBookingClass {
+public class UsersBookingClass {
+
+    @Id
+    @Column(name = "id", unique = true)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
 
     @Column(name = "id_user")
     private int idUser;

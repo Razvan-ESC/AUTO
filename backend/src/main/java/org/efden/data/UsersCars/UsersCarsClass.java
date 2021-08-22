@@ -1,4 +1,4 @@
-package org.efden.data.UserCars;
+package org.efden.data.UsersCars;
 
 import javax.persistence.*;
 

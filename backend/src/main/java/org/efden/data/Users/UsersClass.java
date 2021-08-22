@@ -1,4 +1,4 @@
-package org.efden.data.User;
+package org.efden.data.Users;
 
 import javax.persistence.*;
 import java.sql.Date;
